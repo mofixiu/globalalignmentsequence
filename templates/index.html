@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Global Alignment — Black & White</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+  </head>
+  <body>
+    <main class="card">
+      <h1>Global Alignment</h1>
+      <form id="alignForm">
+        <label>Sequence 1<textarea name="seq1" required></textarea></label>
+        <label>Sequence 2<textarea name="seq2" required></textarea></label>
+        <div class="row">
+          <label>Match<input name="match" type="number" value="1"></label>
+          <label>Mismatch<input name="mismatch" type="number" value="-1"></label>
+          <label>Gap<input name="gap" type="number" value="-1"></label>
+        </div>
+        <div class="row actions">
+          <button type="submit" class="btn">Compute</button>
+          <button type="button" id="clear" class="btn ghost">Clear</button>
+        </div>
+      </form>
+
+      <section id="result" class="result">
+        <h2>Result</h2>
+        <pre id="score">-</pre>
+        <pre id="aln1" class="aln">-</pre>
+        <pre id="aln2" class="aln">-</pre>
+      </section>
+    </main>
+    <script src="/static/js/app.js"></script>
+  </body>
+</html>
